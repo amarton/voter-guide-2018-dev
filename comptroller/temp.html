@@ -1,0 +1,93 @@
+<html>
+<head>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+      <script language="javascript" src="../scripts/jquery.easing.1.3.js"> </script>
+
+
+      <!-- CSS
+      ================================================== -->
+
+      <link rel="stylesheet" type="text/css" href="../stylesheets/base.css" />
+      <link rel="stylesheet" type="text/css" href="../stylesheets/fonts.css" />
+      <link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+
+      <!--BOOTSTRAP and MORE JS
+      ================================================== -->
+      <link rel="stylesheet" href="../stylesheets/bootstrap.min.css">
+      <script src="../scripts/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../stylesheets/buttons.css" />
+
+
+
+
+
+</head>
+
+
+
+              <div class="btn-group" id="testing">
+                <button class="btn btn-primary btn-lg dropdown-toggle" id="chooseDistrict" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span id="chooseDistrictText">Choose party</span> <span class="caret"></span>
+                </button>
+                
+                <ul class="dropdown-menu"><!-- choose race district -->
+                  <li onClick="filter('democrats');" >democrats</li>
+                  <li onClick="filter('republicans');">republicans</li>
+                  <li onClick="filter('green');">Greens</li>
+                  <li onClick="filter('all');">All</li>
+                </ul>
+
+              </div>
+
+
+              <div id="democrats">democrats</div>
+              <div id="republicans">republicans</div>
+              <div id="green">Green</div>
+              <div id ="text" style="font-size: 2em;"></div>
+
+
+
+<script type="text/javascript">
+
+  function filter(party) {
+  
+  if (party == "democrats") {
+
+        $("#democrats").show();
+        $("#republicans").hide();
+        $("#green").hide();
+        $('#text').empty();
+        $('#text').text('democrats');
+ 
+    }  else if (party == "republicans") {
+
+        $("#democrats").hide();
+        $("#republicans").show();
+        $("#green").hide();
+        $('#text').empty();
+        $('#text').text('republicans');
+    
+    }  else if (party == "green") {
+
+        $("#democrats").hide();
+        $("#republicans").hide();
+        $("#green").show();
+        $('#text').empty();
+        $('#text').text('GREENS');
+
+ } else if (party == "all") {
+
+        $("#democrats").show();
+        $("#republicans").show();
+        $("#green").show();
+        $('#text').empty();
+        $('#text').text('ALL');
+ }
+
+  }
+
+
+</script>
+
+</html>
